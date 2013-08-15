@@ -34,9 +34,5 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
-  <component name="VagrantSettings">
-    <option name="instanceFolder" value="" />
-    <option name="vagrantExecutable" value="vagrant" />
-  </component>
 </project>
 

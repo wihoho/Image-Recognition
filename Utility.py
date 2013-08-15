@@ -6,7 +6,8 @@ import os
 from pylab import *
 import pickle
 from scipy.cluster.vq import *
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, MiniBatchKMeans
+from sklearn.svm import *
 
 def process_image_dsift(imagename,resultname,size=20,steps=10,force_orientation=False,resize=None):
 
@@ -66,12 +67,17 @@ def readData(folderPath):
 
     stackOfFeatures = []
     for label in os.listdir(folderPath):
+        if label == '.DS_Store':
+            continue
         imagesPath = folderPath +"/"+ label
 
         for imagePath in os.listdir(imagesPath):
             # print "Extract features from " +imagePath
 
             imagePath = imagesPath +"/"+ imagePath
+            img = Image.open(imagePath)
+            width, height = img.size
+
             process_image_dsift(imagePath, 'temp.sift', 16, 8, False)
             l, d = read_features_from_file('temp.sift')
 
@@ -82,7 +88,7 @@ def readData(folderPath):
                 descriptors.append(descriptor)
                 stackOfFeatures.append(descriptor.descriptor)
 
-            imDescriptors = imageDescriptors(descriptors, label)
+            imDescriptors = imageDescriptors(descriptors, label, width, height)
             images.append(imDescriptors)
 
     return images, array(stackOfFeatures)
@@ -97,15 +103,43 @@ def loadDataFromFile(filePath):
     data = pickle.load(file)
     return data
 
+def normalizeColumn(inputArray):
+    row = inputArray.shape[0]
+    column = inputArray.shape[1]
+
+    for i in range(column):
+        tempSum = sum(inputArray[:,i])
+        if tempSum == 0:
+            continue
+
+        for j in range(row):
+            inputArray[j][i] /= float(tempSum)
+
+def SVMclassify(trainData, trainLabels, testData, testLabels, kernelType = 'rbf', normalizeOrNot = False):
+
+    if normalizeOrNot:
+        normalizeColumn(trainData)
+        normalizeColumn(testData)
+
+    clf = SVC(kernel = kernelType)
+    clf.fit(trainData, trainLabels)
+    SVMResults = clf.predict(testData)
+
+    correct = sum(1.0 * (SVMResults == testLabels))
+    accuracy = correct / len(testLabels)
+    print "SVM: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+
+
 
 class Vocabulary:
 
     def __init__(self, stackOfDescriptors, k,  subSampling = 10):
-        # kmeans = KMeans(init='k-means++', n_clusters=300, n_init=10)
-        # kmeans.fit(stackOfDescriptors)
-        # self.vocabulary = kmeans.cluster_centers_
+        kmeans = MiniBatchKMeans(init='k-means++', n_clusters=300, n_init=10)
+        kmeans.fit(stackOfDescriptors)
+        self.vocabulary = kmeans.cluster_centers_
 
-        self.vocabulary, distortion = kmeans(stackOfDescriptors[::subSampling, :], k, 5)
+        # self.vocabulary, distortion = kmeans(stackOfDescriptors[::subSampling, :], k, 5)
         self.size = self.vocabulary.shape[0]
 
     def buildHistogram(self, imageDescriptors):
@@ -127,24 +161,53 @@ class Vocabulary:
         # vocabulary is an instance of Vocabulary
         # level: 0 - vocabularySize     1 - 5 * vocabularySize      2 - 21 * vocabularySize
 
+        width = descriptorsOfImage.width
+        height = descriptorsOfImage.height
+
         descriptors = descriptorsOfImage.descriptors
 
+
         # level 2, a list with size = 16 to store histograms at different location
-        histogramOfLevelThree = []
-        for location in range(16):
-            xLeft = (location / 4) * 50
-            xRight = xLeft + 50
-            yLeft = (location % 4) * 50
-            yRight = yLeft + 50
+        histogramOfLevelTwo = zeros((16, 300))
+        for descriptor in descriptors:
+            x = descriptor.x
+            y = descriptor.y
+            boundaryIndex = int(x / width) * 4 + int(y / height) *16
 
+            feature = descriptor.descriptor
+            shape = feature.shape[0]
+            feature = feature.reshape(1, shape)
 
+            codes, distance = vq(feature, self.vocabulary)
+            histogramOfLevelTwo[boundaryIndex][codes[0]] += 1
 
-
-
-        # level 1
+        # level 1, based on histograms generated on level two
+        histogramOfLevelOne = zeros((4, 300))
+        histogramOfLevelOne[0] = histogramOfLevelTwo[0] + histogramOfLevelTwo[1] + histogramOfLevelTwo[4] + histogramOfLevelTwo[5]
+        histogramOfLevelOne[1] = histogramOfLevelTwo[2] + histogramOfLevelTwo[3] + histogramOfLevelTwo[6] + histogramOfLevelTwo[7]
+        histogramOfLevelOne[2] = histogramOfLevelTwo[8] + histogramOfLevelTwo[9] + histogramOfLevelTwo[12] + histogramOfLevelTwo[13]
+        histogramOfLevelOne[3] = histogramOfLevelTwo[10] + histogramOfLevelTwo[11] + histogramOfLevelTwo[14] + histogramOfLevelTwo[15]
 
         # level 0
+        histogramOfLevelZero = histogramOfLevelOne[0] + histogramOfLevelOne[1] + histogramOfLevelOne[2] + histogramOfLevelOne[3]
 
+
+        if level == 0:
+            return histogramOfLevelZero
+
+        elif level == 1:
+            tempOne = histogramOfLevelOne.flatten() * 0.5
+            result = concatenate((histogramOfLevelZero,tempOne))
+            return result
+
+        elif level == 2:
+            tempOne = histogramOfLevelOne.flatten() * 0.5
+            tempTwo = histogramOfLevelTwo.flatten() * 0.25
+            result = concatenate((histogramOfLevelZero, tempOne, tempTwo))
+            return result
+
+        else:
+            return None
 
 
 class siftDescriptor:
@@ -166,6 +229,8 @@ class siftDescriptor:
 
 class imageDescriptors:
 
-    def __init__(self, descriptors, label):
+    def __init__(self, descriptors, label, width, height):
         self.descriptors = descriptors
         self.label = label
+        self.width = width
+        self.height = height
