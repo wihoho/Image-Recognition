@@ -4,15 +4,21 @@ from Utility import *
 from buildHistograms import buildHistogram
 
 # buld vocabulary according to training data
+
+print "Build Vocabulary using kmeans algorithm"
 trainData, stackOfFeatures = readData("images/training")
 voc = Vocabulary(stackOfFeatures, 300, subSampling=1)
 writeDataToFile("voc.pkl", voc)
 
 # build histograms for training and testing data
+
+print "Build histograms for each image at different levels"
 buildHistogram("training")
 buildHistogram("testing")
 
 # Read in histograms
+
+print "Read in histograms from files"
 trainData = array(loadDataFromFile("Data/trainingHistogram.pkl"))
 trainLabels = loadDataFromFile("Data/traininglabels.pkl")
 
@@ -20,6 +26,8 @@ testData = array(loadDataFromFile("Data/testingHistogram.pkl"))
 testLabel = loadDataFromFile("Data/testinglabels.pkl")
 
 # SVM
+
+print "Classify"
 from sklearn.svm import *
 clf = SVC()
 clf.fit(trainData, trainLabels)

@@ -2,6 +2,8 @@ __author__ = 'GongLi'
 import Utility
 from numpy import array
 
+trainData = array(Utility.loadDataFromFile("Data/trainingHistogram.pkl"))
+
 # Read in data
 trainData = array(Utility.loadDataFromFile("Data/trainingHistogram.pkl"))
 trainLabels = Utility.loadDataFromFile("Data/traininglabels.pkl")

@@ -1,11 +1,13 @@
 __author__ = 'GongLi'
 
 from Utility import *
+import scipy.io
 
 def buildHistogram(path):
 
     # Read in vocabulary & data
     voc = loadDataFromFile("Data/voc.pkl")
+
     trainData, stackOfFeatures = readData("images/"+path)
 
     # Transform each feature into histogram
@@ -23,6 +25,13 @@ def buildHistogram(path):
 
     writeDataToFile("Data/"+path+"Histogram.pkl", featureHistogram)
     writeDataToFile("Data/"+path+"labels.pkl", labels)
+
+
+
+
+
+
+
 
 # buildHistogram("testing")
 # buildHistogram("training")

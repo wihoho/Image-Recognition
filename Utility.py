@@ -69,7 +69,7 @@ def readData(folderPath):
         imagesPath = folderPath +"/"+ label
 
         for imagePath in os.listdir(imagesPath):
-            print "Extract features from " +imagePath
+            # print "Extract features from " +imagePath
 
             imagePath = imagesPath +"/"+ imagePath
             process_image_dsift(imagePath, 'temp.sift', 16, 8, False)
@@ -105,7 +105,7 @@ class Vocabulary:
         # kmeans.fit(stackOfDescriptors)
         # self.vocabulary = kmeans.cluster_centers_
 
-        self.vocabulary, distortion = kmeans(stackOfDescriptors[::subSampling, :], k, 1)
+        self.vocabulary, distortion = kmeans(stackOfDescriptors[::subSampling, :], k, 5)
         self.size = self.vocabulary.shape[0]
 
     def buildHistogram(self, imageDescriptors):
@@ -121,6 +121,30 @@ class Vocabulary:
         for code in codes:
             histogram[code] += 1
         return histogram
+
+    def buildHistogramForEachImageAtDifferentLevels(self, descriptorsOfImage, level):
+        # descriptorsOfImage is an instance of class imageDescriptors (descriptors, label)
+        # vocabulary is an instance of Vocabulary
+        # level: 0 - vocabularySize     1 - 5 * vocabularySize      2 - 21 * vocabularySize
+
+        descriptors = descriptorsOfImage.descriptors
+
+        # level 2, a list with size = 16 to store histograms at different location
+        histogramOfLevelThree = []
+        for location in range(16):
+            xLeft = (location / 4) * 50
+            xRight = xLeft + 50
+            yLeft = (location % 4) * 50
+            yRight = yLeft + 50
+
+
+
+
+
+        # level 1
+
+        # level 0
+
 
 
 class siftDescriptor:
@@ -138,8 +162,6 @@ class siftDescriptor:
             descriptor /= float(norm)
 
         return descriptor
-
-
 
 
 class imageDescriptors:
