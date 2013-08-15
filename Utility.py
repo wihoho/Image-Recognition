@@ -2,6 +2,7 @@ __author__ = 'GongLi'
 
 from PIL import Image
 from numpy import *
+import numpy as np
 import os
 from pylab import *
 import pickle
@@ -129,8 +130,18 @@ def SVMclassify(trainData, trainLabels, testData, testLabels, kernelType = 'rbf'
     accuracy = correct / len(testLabels)
     print "SVM: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
 
+def histogramIntersection(M, N):
+    m = M.shape[0]
+    n = N.shape[0]
+    dimension = M.shape[1]
 
+    result = zeros((m,n))
+    for i in range(m):
+        for j in range(n):
+            temp = sum(np.minimum(M[i], N[j]))
+            result[i][j] = temp
 
+    return result
 
 class Vocabulary:
 

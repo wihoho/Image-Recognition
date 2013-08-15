@@ -17,6 +17,34 @@ from buildHistograms import buildHistogram
 # buildHistogram("testing")
 
 # Read in histograms
+
+print "Histogram Intersection Kernel"
+print "Histograms at level 0, 300 dimensions"
+trainData = array(loadDataFromFile("Data/trainingHistogramLevel0.pkl"))
+trainLabels = loadDataFromFile("Data/traininglabels.pkl")
+
+testData = array(loadDataFromFile("Data/testingHistogramLevel0.pkl"))
+testLabels = loadDataFromFile("Data/testinglabels.pkl")
+
+gramMatrix = histogramIntersection(trainData, trainData)
+clf = SVC(kernel='precomputed')
+clf.fit(gramMatrix, trainLabels)
+
+# predict
+predictMatrix = histogramIntersection(testData, trainData)
+SVMResults = clf.predict(predictMatrix)
+correct = sum(1.0 * (SVMResults == testLabels))
+accuracy = correct / len(testLabels)
+print "SVM: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+print ""
+
+
+
+
+
+
+
 print "Histograms at level 0, 300 dimensions"
 trainData = array(loadDataFromFile("Data/trainingHistogramLevel0.pkl"))
 trainLabels = loadDataFromFile("Data/traininglabels.pkl")
