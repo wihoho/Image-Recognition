@@ -143,6 +143,81 @@ def histogramIntersection(M, N):
 
     return result
 
+def EMDofImages(M, N):
+
+    H = M.shape[0]
+    I = N.shape[0]
+    distances = zeros((H, I))
+
+    for i in range(H):
+        for j in range(I):
+            distances[i][j] = linalg.norm(M[i] - N[j])
+
+    # Set variables for EMD calculation
+    from pulp import *
+    import os
+    os.environ['PATH'] += os.pathsep + '/usr/local/bin'
+    variablesList = []
+    for i in range(H):
+        tempList = []
+        for j in range(I):
+            tempList.append(LpVariable("x"+str(i)+" "+str(j), lowBound = 0))
+        variablesList.append(tempList)
+
+    problem = LpProblem("EMD", LpMinimize)
+
+    # add objective function
+    objectiveFunction = []
+    constraint1 = []
+
+    for i in range(H):
+        for j in range(I):
+            constraint1.append(variablesList[i][j])
+            objectiveFunction.append(variablesList[i][j] * distances[i][j])
+
+    problem += lpSum(objectiveFunction)
+
+
+    # add constraints
+    problem += lpSum(constraint1) == 1.0
+    for i in range(H):
+        constraint2 = [variablesList[i][j] for j in range(I)]
+        problem += lpSum(constraint2) <= 1.0 / H
+
+    for j in range(I):
+        constraint3 = [variablesList[i][j] for i in range(H)]
+        problem += lpSum(constraint3) <= 1.0 / I
+
+    # solve
+    problem.writeLP("EMD.lp")
+
+    # The problem is solved using PuLP's choice of Solver
+    problem.solve(GLPK_CMD())
+
+    # # The status of the solution is printed to the screen
+    # print "Status:", LpStatus[problem.status]
+    #
+    # # Each of the variables is printed with it's resolved optimum value
+    # for v in problem.variables():
+    #     print v.name, "=", v.varValue
+
+    # The optimised objective function value is printed to the screen
+    print "Flow = ", value(problem.objective)
+    flow = value(problem.objective)
+
+    # means that M and N are identical, the distance should be 0
+    if flow == 0.0:
+        return 0.0
+
+    # Calculate the EMD distance according to the flow value
+    temp = distances * flow
+    nominator = sum(temp)
+    EMDdistance = nominator / (flow * H * I)
+
+
+    return EMDdistance
+
+
 class Vocabulary:
 
     def __init__(self, stackOfDescriptors, k,  subSampling = 10):
@@ -174,6 +249,8 @@ class Vocabulary:
 
         width = descriptorsOfImage.width
         height = descriptorsOfImage.height
+        widthStep = int(width / 4)
+        heightStep = int(height / 4)
 
         descriptors = descriptorsOfImage.descriptors
 
@@ -183,7 +260,7 @@ class Vocabulary:
         for descriptor in descriptors:
             x = descriptor.x
             y = descriptor.y
-            boundaryIndex = int(x / width) * 4 + int(y / height) *16
+            boundaryIndex = int(x / widthStep)  + int(y / heightStep) *4
 
             feature = descriptor.descriptor
             shape = feature.shape[0]
