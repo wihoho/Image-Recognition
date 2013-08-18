@@ -4,7 +4,7 @@
     <list default="true" id="bdca8845-a996-4b16-991d-29739b60e298" name="Default" comment="" />
     <ignored path="ImageRecognition.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Utility.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376629125862" ignored="false" />
+    <file path="/Utility.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376722699039" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/dsiftTest.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497189539" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/tmp.frame" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497137177" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/Phoning_0001.sift" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497137177" ignored="false" />
@@ -20,6 +20,9 @@
     <file path="/naiveMethod.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376540832001" ignored="false" />
     <file path="/readMatlab.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376551877481" ignored="false" />
     <file path="/testDriver.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376632530747" ignored="false" />
+    <file path="/EMDTest.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376806078339" ignored="false" />
+    <file path="/EMDHistogram.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376748278017" ignored="false" />
+    <file path="/EMD.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376808565891" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,57 @@
     <favorites_list name="ImageRecognition" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="EMDHistogram.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EMDHistogram.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="21" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EMDTest.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EMDTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utility.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utility.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="158" column="4" selection-start="4475" selection-end="4526" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#23#44#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="driver.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/driver.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="95" column="0" selection-start="3237" selection-end="3355" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EMD.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/EMD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.4522613">
+              <folding>
+                <element signature="e#23#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -50,17 +103,20 @@
       <list>
         <option value="$PROJECT_DIR$/classify.py" />
         <option value="$PROJECT_DIR$/readMatlab.py" />
-        <option value="$PROJECT_DIR$/buildHistograms.py" />
-        <option value="$PROJECT_DIR$/Utility.py" />
         <option value="$PROJECT_DIR$/testDriver.py" />
+        <option value="$PROJECT_DIR$/buildHistograms.py" />
         <option value="$PROJECT_DIR$/driver.py" />
+        <option value="$PROJECT_DIR$/EMDHistogram.py" />
+        <option value="$PROJECT_DIR$/EMDTest.py" />
+        <option value="$PROJECT_DIR$/Utility.py" />
+        <option value="$PROJECT_DIR$/EMD.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
+    <option name="x" value="122" />
     <option name="y" value="22" />
-    <option name="width" value="1213" />
+    <option name="width" value="1224" />
     <option name="height" value="778" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -89,6 +145,7 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -109,17 +166,16 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -138,7 +194,7 @@
       <recent name="$PROJECT_DIR$/Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.driver">
+  <component name="RunManager" selected="Python.EMD">
     <configuration default="false" name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -181,46 +237,6 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="readMatlab" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ImageRecognition" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/readMatlab.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="LinearProgramming" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ImageRecognition" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LinearProgramming.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="EMDTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,6 +251,48 @@
       <module name="ImageRecognition" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMDTest.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EMDHistogram" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ImageRecognition" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMDHistogram.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PyDebugRunner" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="EMD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ImageRecognition" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMD.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -304,17 +362,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.driver" />
       <item index="1" class="java.lang.String" itemvalue="Python.buildHistograms" />
-      <item index="2" class="java.lang.String" itemvalue="Python.readMatlab" />
-      <item index="3" class="java.lang.String" itemvalue="Python.LinearProgramming" />
-      <item index="4" class="java.lang.String" itemvalue="Python.EMDTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.EMDTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.EMDHistogram" />
+      <item index="4" class="java.lang.String" itemvalue="Python.EMD" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.driver" />
+        <item index="0" class="java.lang.String" itemvalue="Python.EMD" />
         <item index="1" class="java.lang.String" itemvalue="Python.EMDTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.buildHistograms" />
-        <item index="3" class="java.lang.String" itemvalue="Python.LinearProgramming" />
-        <item index="4" class="java.lang.String" itemvalue="Python.readMatlab" />
+        <item index="2" class="java.lang.String" itemvalue="Python.EMDHistogram" />
+        <item index="3" class="java.lang.String" itemvalue="Python.driver" />
+        <item index="4" class="java.lang.String" itemvalue="Python.buildHistograms" />
       </list>
     </recent_temporary>
   </component>
@@ -328,18 +386,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="22" width="1213" height="778" extended-state="0" />
+    <frame x="122" y="22" width="1224" height="778" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24078834" sideWeight="0.6272727" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37272727" sideWeight="0.49957156" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19779287" sideWeight="0.6454545" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19269949" sideWeight="0.6454545" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.50454545" sideWeight="0.49957156" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58484846" sideWeight="0.50042844" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28939393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35454544" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -411,52 +469,38 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/EMDTest.py</url>
-          <line>40</line>
-          <option name="timeStamp" value="74" />
+          <url>file://$PROJECT_DIR$/EMDHistogram.py</url>
+          <line>102</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/EMDTest.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="76" />
+          <url>file://$PROJECT_DIR$/EMDHistogram.py</url>
+          <line>116</line>
+          <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/driver.py</url>
-          <line>68</line>
-          <option name="timeStamp" value="78" />
+          <line>8</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/EMDHistogram.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/EMD.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="79" />
+      <option name="time" value="100" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/EMDTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/scipy-0.13.0.dev_c31f167_20130617-py2.7-macosx-10.8-intel.egg/scipy/cluster/vq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="202" column="0" selection-start="7877" selection-end="7877" vertical-scroll-proportion="0.33211678">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1123" column="0" selection-start="46950" selection-end="46950" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/scikit_learn-0.14_git-py2.7-macosx-10.8-intel.egg/sklearn/svm/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="0" selection-start="4625" selection-end="4625" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/scikit_learn-0.14_git-py2.7-macosx-10.8-intel.egg/sklearn/utils/validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="95" column="0" selection-start="3186" selection-end="3186" vertical-scroll-proportion="0.33333334" />
@@ -472,31 +516,70 @@
         <state line="42" column="0" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.22955975" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EMDTest.py">
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="41" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.0">
+        <state line="1480" column="0" selection-start="59057" selection-end="59101" vertical-scroll-proportion="0.57575756">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp.sift">
+    <entry file="file://$PROJECT_DIR$/buildHistograms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="43" selection-start="1003" selection-end="1003" vertical-scroll-proportion="0.09651475">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/scikit_learn-0.14_git-py2.7-macosx-10.8-intel.egg/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="158" column="0" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.33229813">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMDHistogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="21" selection-start="2375" selection-end="2375" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/PuLP-1.5.4-py2.7.egg/pulp/solvers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="327" column="0" selection-start="11991" selection-end="11991" vertical-scroll-proportion="0.33110368">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="17" selection-start="527" selection-end="527" vertical-scroll-proportion="0.5284974">
+        <state line="95" column="0" selection-start="3237" selection-end="3355" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMDTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="403" selection-end="403" vertical-scroll-proportion="0.22520107">
-          <folding />
+        <state line="158" column="4" selection-start="4475" selection-end="4526" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#23#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="662" selection-end="662" vertical-scroll-proportion="0.4522613">
+          <folding>
+            <element signature="e#23#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

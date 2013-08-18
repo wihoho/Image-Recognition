@@ -9,6 +9,8 @@ import pickle
 from scipy.cluster.vq import *
 from sklearn.cluster import KMeans, MiniBatchKMeans
 from sklearn.svm import *
+from pulp import *
+import os
 
 def process_image_dsift(imagename,resultname,size=20,steps=10,force_orientation=False,resize=None):
 
@@ -133,7 +135,6 @@ def SVMclassify(trainData, trainLabels, testData, testLabels, kernelType = 'rbf'
 def histogramIntersection(M, N):
     m = M.shape[0]
     n = N.shape[0]
-    dimension = M.shape[1]
 
     result = zeros((m,n))
     for i in range(m):
@@ -154,8 +155,7 @@ def EMDofImages(M, N):
             distances[i][j] = linalg.norm(M[i] - N[j])
 
     # Set variables for EMD calculation
-    from pulp import *
-    import os
+
     os.environ['PATH'] += os.pathsep + '/usr/local/bin'
     variablesList = []
     for i in range(H):
@@ -202,20 +202,10 @@ def EMDofImages(M, N):
     #     print v.name, "=", v.varValue
 
     # The optimised objective function value is printed to the screen
-    print "Flow = ", value(problem.objective)
     flow = value(problem.objective)
 
     # means that M and N are identical, the distance should be 0
-    if flow == 0.0:
-        return 0.0
-
-    # Calculate the EMD distance according to the flow value
-    temp = distances * flow
-    nominator = sum(temp)
-    EMDdistance = nominator / (flow * H * I)
-
-
-    return EMDdistance
+    return flow / 1.0
 
 
 class Vocabulary:

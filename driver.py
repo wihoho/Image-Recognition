@@ -1,7 +1,6 @@
 __author__ = 'GongLi'
 
 from Utility import *
-from buildHistograms import buildHistogram
 
 # buld vocabulary according to training data
 
