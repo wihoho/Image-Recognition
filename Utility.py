@@ -207,6 +207,35 @@ def EMDofImages(M, N):
     # means that M and N are identical, the distance should be 0
     return flow / 1.0
 
+def C_EMD(feature1, feature2):
+    os.environ['PATH'] += os.pathsep + '/usr/local/bin'
+
+    H = feature1.shape[0]
+    I = feature2.shape[0]
+
+    distances = np.zeros((H, I))
+    for i in range(H):
+        for j in range(I):
+            distances[i][j] = np.linalg.norm(feature1[i] - feature2[j])
+
+
+    groundDistanceFile = open("groundDistance", "w")
+    groundDistanceFile.write(str(H) +" "+ str(I) +"\n")
+
+    distances = distances.reshape((H * I, 1))
+    for i in range(H * I):
+        groundDistanceFile.write(str(distances[i][0]) + "\n")
+
+    groundDistanceFile.close()
+
+    # Run C programme to calculate EMD
+    os.system("/Users/GongLi/PycharmProjects/ImageRecognition/EarthMoverDistance")
+
+    # Read in EMD distance
+    file = open("result", "r").readlines()
+
+    return float(file[0])
+
 
 class Vocabulary:
 

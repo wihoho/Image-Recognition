@@ -2,7 +2,7 @@ __author__ = 'GongLi'
 
 from Utility import *
 
-# buld vocabulary according to training data
+# build vocabulary according to training data
 
 # print "Build Vocabulary using kmeans algorithm"
 # trainData, stackOfFeatures = readData("images/training")
