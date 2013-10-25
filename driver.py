@@ -87,6 +87,18 @@ testData = array(loadDataFromFile("Data/testingHistogramLevel0.pkl"))
 testLabels = loadDataFromFile("Data/testinglabels.pkl")
 
 
+from sklearn.neighbors import KNeighborsClassifier
+KNN = KNeighborsClassifier()
+KNN.fit(trainData, trainLabels)
+KNN_testLabels = KNN.predict(testData)
+
+correct = sum(1.0 * (KNN_testLabels == testLabels))
+accuracy = correct / len(testLabels)
+print "KNN: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+
+
+
 print "-----------Linear------------------"
 SVMclassify(trainData, trainLabels, testData, testLabels, kernelType = 'linear')
 

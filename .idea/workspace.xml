@@ -4,12 +4,12 @@
     <list default="true" id="bdca8845-a996-4b16-991d-29739b60e298" name="Default" comment="" />
     <ignored path="ImageRecognition.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Utility.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1377419336422" ignored="false" />
+    <file path="/Utility.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1382021666664" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/dsiftTest.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497189539" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/tmp.frame" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497137177" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/Phoning_0001.sift" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497137177" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/PCV/localdescriptors/dsift.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376497208970" ignored="false" />
-    <file path="/driver.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376835436687" ignored="false" />
+    <file path="/driver.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1381831643987" ignored="false" />
     <file path="$USER_HOME$/Desktop/PCV-master/k-means.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376533684580" ignored="false" />
     <file path="/k-means.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376533680900" ignored="false" />
     <file path="/buildHistograms.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1376576399479" ignored="false" />
@@ -32,6 +32,13 @@
     <file path="/EMDAlignment.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1377422123561" ignored="false" />
     <file path="$PROJECT_DIR$/../VideoRecognition/keyFramesIdentification.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1377420778577" ignored="false" />
     <file path="/keyFramesIdentification.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1377420125324" ignored="false" />
+    <file path="$PROJECT_DIR$/../GaussianMixtureModel/MAP_GMM.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1381892039458" ignored="false" />
+    <file path="$PROJECT_DIR$/../GaussianMixtureModel/calculateDistance.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1381892710022" ignored="false" />
+    <file path="/calculateDistance.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1381892701134" ignored="false" />
+    <file path="/Report_Test.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1382032070975" ignored="false" />
+    <file path="$PROJECT_DIR$/../GaussianMixtureModel/buildLocalGMM.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1381930449190" ignored="false" />
+    <file path="/ImageEMD.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1382022980232" ignored="false" />
+    <file path="/Report_EMD.py" changelist="bdca8845-a996-4b16-991d-29739b60e298" time="1382031472927" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,25 +52,30 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <flatten value="false" />
+    <groupTables value="false" />
+    <sortChildren value="false" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ImageRecognition" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Utility.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Utility.py">
+      <file leaf-file-name="ImageEMD.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ImageEMD.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="275" column="0" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.0">
+            <state line="76" column="34" selection-start="1918" selection-end="1927" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buildHistograms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/buildHistograms.py">
+      <file leaf-file-name="Utility.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utility.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="58" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+            <state line="235" column="35" selection-start="6709" selection-end="6709" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -72,46 +84,27 @@
       <file leaf-file-name="EMDTest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EMDTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="34" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+            <state line="76" column="25" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EMDAlignment.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/EMDAlignment.py">
+      <file leaf-file-name="Report_Test.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Report_Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="0" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.5457413">
-              <folding>
-                <element signature="e#23#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+            <state line="40" column="0" selection-start="5686" selection-end="5686" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-            <state />
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="Shooting_0040.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/training/Shooting/Shooting_0040.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Shooting_0060.jpg" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/testing/Shooting/Shooting_0060.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
+      <file leaf-file-name="Report_EMD.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Report_EMD.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="0" selection-start="883" selection-end="883" vertical-scroll-proportion="0.6555024">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -128,22 +121,25 @@
         <option value="$PROJECT_DIR$/classify.py" />
         <option value="$PROJECT_DIR$/readMatlab.py" />
         <option value="$PROJECT_DIR$/testDriver.py" />
-        <option value="$PROJECT_DIR$/buildHistograms.py" />
         <option value="$PROJECT_DIR$/EMDHistogram.py" />
         <option value="$PROJECT_DIR$/EMD.py" />
-        <option value="$PROJECT_DIR$/driver.py" />
-        <option value="$PROJECT_DIR$/Utility.py" />
         <option value="$PROJECT_DIR$/result" />
-        <option value="$PROJECT_DIR$/EMDTest.py" />
         <option value="$PROJECT_DIR$/EMDAlignment.py" />
+        <option value="$PROJECT_DIR$/driver.py" />
+        <option value="$PROJECT_DIR$/buildHistograms.py" />
+        <option value="$PROJECT_DIR$/EMDTest.py" />
+        <option value="$PROJECT_DIR$/Utility.py" />
+        <option value="$PROJECT_DIR$/ImageEMD.py" />
+        <option value="$PROJECT_DIR$/Report_EMD.py" />
+        <option value="$PROJECT_DIR$/Report_Test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="58" />
+    <option name="x" value="59" />
     <option name="y" value="22" />
-    <option name="width" value="1222" />
-    <option name="height" value="778" />
+    <option name="width" value="1381" />
+    <option name="height" value="878" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -171,7 +167,6 @@
       <sortByType ProjectPane="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -200,7 +195,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="Report_Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -214,26 +209,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="Report_Data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testing" />
+              <option name="myItemId" value="EMD" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageRecognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ImageRecognition" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="EMDone" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DomainAdaption" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -245,15 +256,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/EMDone" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Report_Data/General" />
       <recent name="$PROJECT_DIR$/Data" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EMDAlignment">
-    <configuration default="false" name="driver" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Report_EMD">
+    <configuration default="false" name="EMD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -266,32 +279,9 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ImageRecognition" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/driver.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMD.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="buildHistograms" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ImageRecognition" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/buildHistograms.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -310,15 +300,11 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMDTest.py" />
       <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PyDebugRunner" />
-      <RunnerSettings RunnerId="PythonCover" />
       <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PyDebugRunner" />
-      <ConfigurationWrapper RunnerId="PythonCover" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="EMD" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="ImageEMD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -331,7 +317,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ImageRecognition" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMD.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ImageEMD.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -339,7 +325,7 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="EMDAlignment" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="Report_EMD" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -352,11 +338,30 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ImageRecognition" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EMDAlignment.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Report_EMD.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PyDebugRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Report_Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ImageRecognition" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Report_Test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
@@ -420,18 +425,18 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.driver" />
-      <item index="1" class="java.lang.String" itemvalue="Python.buildHistograms" />
-      <item index="2" class="java.lang.String" itemvalue="Python.EMDTest" />
-      <item index="3" class="java.lang.String" itemvalue="Python.EMD" />
-      <item index="4" class="java.lang.String" itemvalue="Python.EMDAlignment" />
+      <item index="0" class="java.lang.String" itemvalue="Python.EMD" />
+      <item index="1" class="java.lang.String" itemvalue="Python.EMDTest" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ImageEMD" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Report_EMD" />
+      <item index="4" class="java.lang.String" itemvalue="Python.Report_Test" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.EMDAlignment" />
-        <item index="1" class="java.lang.String" itemvalue="Python.EMDTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.driver" />
-        <item index="3" class="java.lang.String" itemvalue="Python.buildHistograms" />
+        <item index="0" class="java.lang.String" itemvalue="Python.Report_EMD" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Report_Test" />
+        <item index="2" class="java.lang.String" itemvalue="Python.ImageEMD" />
+        <item index="3" class="java.lang.String" itemvalue="Python.EMDTest" />
         <item index="4" class="java.lang.String" itemvalue="Python.EMD" />
       </list>
     </recent_temporary>
@@ -446,18 +451,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="58" y="22" width="1222" height="778" extended-state="6" />
-    <editor active="true" />
+    <frame x="59" y="22" width="1381" height="878" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32919255" sideWeight="0.6868421" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19779287" sideWeight="0.6454545" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21258503" sideWeight="0.52272725" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3030303" sideWeight="0.49957156" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25561187" sideWeight="0.3192848" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6807152" sideWeight="0.49957156" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58484846" sideWeight="0.50042844" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47727272" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30268198" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -539,11 +544,6 @@
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/driver.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/EMDHistogram.py</url>
           <line>78</line>
           <option name="timeStamp" value="97" />
@@ -554,126 +554,119 @@
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/buildHistograms.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/EMDTest.py</url>
           <line>171</line>
           <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Utility.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/Report_EMD.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="139" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="128" />
+      <option name="time" value="140" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/original_result">
+    <entry file="file://$PROJECT_DIR$/temp.sift">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.2868526">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-34.058823" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/training/Shooting/Shooting_0039.jpg">
+    <entry file="file://$PROJECT_DIR$/tmp.pgm">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/testing/Shooting/Shooting_0059.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/classify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="713" selection-end="713" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/driver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="0" selection-start="3921" selection-end="3921" vertical-scroll-proportion="2.1455696">
+        <state line="106" column="0" selection-start="3568" selection-end="3568" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/buildHistograms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="52" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="43" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.39242685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMDAlignment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="28" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMDHistogram.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="32" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/numpy-1.8.0.dev_dff8c94_20130602-py2.7-macosx-10.8-intel.egg/numpy/lib/index_tricks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="0" selection-start="2082" selection-end="2082" vertical-scroll-proportion="0.33734939" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EMDone/result">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ImageEMD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="34" selection-start="1918" selection-end="1927" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/groundDistance">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/training/Shooting/Shooting_0001.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/training/Shooting/Shooting_0002.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/testing/Shooting/Shooting_0041.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file:///Library/Python/2.7/site-packages/PIL/Image.py">
+    <entry file="file://$PROJECT_DIR$/Utility.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1951" column="0" selection-start="62102" selection-end="62102" vertical-scroll-proportion="0.0">
+        <state line="235" column="35" selection-start="6709" selection-end="6709" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EMDTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="34" selection-start="1054" selection-end="1054" vertical-scroll-proportion="0.0">
+        <state line="76" column="25" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/buildHistograms.py">
+    <entry file="file://$PROJECT_DIR$/Report_Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="58" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
+        <state line="40" column="0" selection-start="5686" selection-end="5686" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Utility.py">
+    <entry file="file://$PROJECT_DIR$/Report_EMD.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="275" column="0" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="883" selection-end="883" vertical-scroll-proportion="0.6555024">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/training/Shooting/Shooting_0040.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/testing/Shooting/Shooting_0060.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/result">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.persistence.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EMDAlignment.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="1591" selection-end="1591" vertical-scroll-proportion="0.5457413">
-          <folding>
-            <element signature="e#23#45#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

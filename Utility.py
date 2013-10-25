@@ -11,6 +11,8 @@ from sklearn.cluster import KMeans, MiniBatchKMeans
 from sklearn.svm import *
 from pulp import *
 import os
+from sklearn.neighbors import KNeighborsClassifier
+
 
 def process_image_dsift(imagename,resultname,size=20,steps=10,force_orientation=False,resize=None):
 
@@ -75,9 +77,12 @@ def readData(folderPath):
         imagesPath = folderPath +"/"+ label
 
         for imagePath in os.listdir(imagesPath):
-            # print "Extract features from " +imagePath
+            if imagePath == ".DS_Store":
+                continue
 
             imagePath = imagesPath +"/"+ imagePath
+            print imagePath
+
             img = Image.open(imagePath)
             width, height = img.size
 
@@ -237,6 +242,53 @@ def C_EMD(feature1, feature2):
     return float(file[0])
 
 
+def SVM_Classify(trainDataPath, trainLabelPath, testDataPath, testLabelPath, kernelType):
+    trainData = array(loadDataFromFile(trainDataPath))
+    trainLabels = loadDataFromFile(trainLabelPath)
+
+    testData = array(loadDataFromFile(testDataPath))
+    testLabels = loadDataFromFile(testLabelPath)
+
+
+
+    if kernelType == "HI":
+
+        gramMatrix = histogramIntersection(trainData, trainData)
+        clf = SVC(kernel='precomputed')
+        clf.fit(gramMatrix, trainLabels)
+
+        predictMatrix = histogramIntersection(testData, trainData)
+        SVMResults = clf.predict(predictMatrix)
+        correct = sum(1.0 * (SVMResults == testLabels))
+        accuracy = correct / len(testLabels)
+        print "SVM (Histogram Intersection): " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+    else:
+        clf = SVC(kernel = kernelType)
+        clf.fit(trainData, trainLabels)
+        SVMResults = clf.predict(testData)
+
+        correct = sum(1.0 * (SVMResults == testLabels))
+        accuracy = correct / len(testLabels)
+        print "SVM (" +kernelType+"): " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+def KNN_Classify(trainDataPath, trainLabelPath, testDataPath, testLabelPath):
+
+    trainData = array(loadDataFromFile(trainDataPath))
+    trainLabels = loadDataFromFile(trainLabelPath)
+
+    testData = array(loadDataFromFile(testDataPath))
+    testLabels = loadDataFromFile(testLabelPath)
+
+    KNN = KNeighborsClassifier()
+    KNN.fit(trainData, trainLabels)
+    KNN_testLabels = KNN.predict(testData)
+
+    correct = sum(1.0 * (KNN_testLabels == testLabels))
+    accuracy = correct / len(testLabels)
+    print "KNN: " +str(accuracy)+ " (" +str(int(correct))+ "/" +str(len(testLabels))+ ")"
+
+
 class Vocabulary:
 
     def __init__(self, stackOfDescriptors, k,  subSampling = 10):
@@ -303,14 +355,17 @@ class Vocabulary:
             return histogramOfLevelZero
 
         elif level == 1:
+            tempZero = histogramOfLevelZero.flatten() * 0.5
             tempOne = histogramOfLevelOne.flatten() * 0.5
-            result = concatenate((histogramOfLevelZero,tempOne))
+            result = concatenate((tempZero, tempOne))
             return result
 
         elif level == 2:
-            tempOne = histogramOfLevelOne.flatten() * 0.5
-            tempTwo = histogramOfLevelTwo.flatten() * 0.25
-            result = concatenate((histogramOfLevelZero, tempOne, tempTwo))
+
+            tempZero = histogramOfLevelZero.flatten() * 0.25
+            tempOne = histogramOfLevelOne.flatten() * 0.25
+            tempTwo = histogramOfLevelTwo.flatten() * 0.5
+            result = concatenate((tempZero, tempOne, tempTwo))
             return result
 
         else:

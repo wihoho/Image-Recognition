@@ -23,8 +23,8 @@ def buildHistogram(path, level):
 
     print "Start to store histograms"
 
-    writeDataToFile("Data/"+path+"HistogramLevel" +str(level)+ ".pkl", featureHistogram)
-    writeDataToFile("Data/"+path+"labels.pkl", labels)
+    writeDataToFile("Report_Data/"+path+"HistogramLevel" +str(level)+ ".pkl", featureHistogram)
+    writeDataToFile("Report_Data/"+path+"labels.pkl", labels)
 
 if __name__ == '__main__':
 
