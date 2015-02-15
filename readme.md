@@ -28,7 +28,9 @@ The image data set, in which there are six classes (shooting, playing guitar, ru
 Recognition accuracies (percent) of different pyramids using SVMs with different kernels
 ![result](https://dl.dropboxusercontent.com/u/37572555/Github/Image%20Recognition/result1.png)
 
-Comparison of recognition accuracy (percent) between aligned distance and unaligned distance![result](https://dl.dropboxusercontent.com/u/37572555/Github/Image%20Recognition/result2.png)
+Comparison of recognition accuracy (percent) between aligned distance and unaligned distance
+
+![result](https://dl.dropboxusercontent.com/u/37572555/Github/Image%20Recognition/result2.png)
 
 ### References
 [1] S. Lazebnik, C. Schmid, and J. Ponce, “Beyond bags of features: Spatial pyramid matching for recognizing natural scene categories,” in Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on, vol. 2. IEEE, 2006, pp. 2169–2178.
@@ -38,3 +40,5 @@ Comparison of recognition accuracy (percent) between aligned distance and unalig
 [3] P. Li, J. Ma, and S. Gao, “Actions in still web images: Visualization, detec- tion and retrieval,” in Web-Age Information Management. Springer, 2011, pp. 302–313.
 
 
+### License
+MIT License
