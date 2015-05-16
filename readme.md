@@ -11,6 +11,15 @@ For better explanation, please refer to [my report](https://dl.dropboxuserconten
 4. numpy
 5. scipy
 
+In terms of vlfeat, do the following steps to ensure SIFT extractions succeed.
+
+1. Download vlfeat and remember the path of vlfeat of your environment
+2. Update the following path at line 84 in `/recognition/utils.py` with your own path of vlfeat
+
+```python
+os.environ['PATH'] += os.pathsep +'/Users/GongLi/Dropbox/FYP/PythonProject/vlfeat/bin/maci64'
+os.system(cmmd)
+```
 
 ### Usage 
 Below are two examples of two approaches to recognise images.
