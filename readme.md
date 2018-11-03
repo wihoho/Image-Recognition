@@ -1,4 +1,4 @@
-### Introduction
+### Introduction [![HitCount](http://hits.dwyl.io/wihoho/wihoho/Image-Recognition.svg)](http://hits.dwyl.io/wihoho/wihoho/Image-Recognition)
 This python package implements Spatial Pyramid Matching [1] to recognize images under different categories. Furthermore, Earth Mover's distance [2] is also incorporated to better align parts of images when calculating image-to-image distance. 
 
 For better explanation, please refer to [my report](https://dl.dropboxusercontent.com/u/37572555/Github/Image%20Recognition/ImageRec.pdf).
